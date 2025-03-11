@@ -18,6 +18,7 @@ header {
     justify-content: center;
     padding: 10px 20px;
     background-color: #fff;
+    position: relative;
 }
 
 .logo {
@@ -153,64 +154,115 @@ img {
     max-width: 100%;
 }
 
-@media (max-width: 1024px) {
+.click-to-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    cursor: pointer;
+    width: 514px;
+    height: 154px;
+    border-radius: 12;
+    border: 1px solid #ccc;
+    padding: 32;
+    gap: 12;
+    background: #fafafa;
+    border: none;
+}
+
+/* Адаптация устроиств*/
+@media (max-width: 992px) {
     .search-box {
-        width: 80%;
+        width: 220px;
+    }
+    nav .menu {
+        gap:10px
     }
 }
 
 @media (max-width: 768px) {
-    .search {
+    header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
     }
 
     .search-box {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .filter-btn {
-        margin-left: 10px;
+        width: 100%;
     }
 
     .enabling-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #f5f5f5;
-        margin-top: 10px;
-    }
-
-    .enabling-btn img {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* Коррекция исчезнувших элементов */
-    .folders, .notes, .bookmarks {
-        display: block !important;
-        text-align: center;
-        margin-top: 10px;
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .search-box {
-        width: 100%;
-        max-width: 300px;
-    }
+/*Это для меню, скрытие меню*/
 
-    .enabling-btn {
-        width: 35px;
-        height: 35px;
-    }
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+}
 
-    .enabling-btn img {
-        width: 18px;
-        height: 18px;
+/*Показ меню при активации*/
+
+.mobile-menu.open {
+    display: block;
+}
+
+/*стили пунктов меню*/
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #3F4246;
+    display: flex;
+    align-items: center;
+}
+
+/*раскрываюшееся кнопка*/
+
+.menu-toggle {
+    position: relative;
+    z-index: 1100;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Отображаем кнопку и скрываем меню на мобильных */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        display: none;
     }
 }

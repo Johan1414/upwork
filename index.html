@@ -42,8 +42,34 @@
         <button class="enabling-btn">
             <img src="/img/Frame 8.svg" class="enabling" alt="Включение">
         </button>
+
+        <!-- это адаптация для мобилки -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="">
+                    <img src="img/Folder 1.svg" alt="dirs">
+                    Мои папки и заметки
+                </a>
+                </li>
+                <li><a href="">
+                    <img src="img/Star 1.svg" alt="Zakladka">
+                    Мои закладки
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- это адаптация для мобилки -->
     </header>
-    
+
+    <button class="click-to-page">
+        <img src="img/plus.svg" alt="plus">
+        <p class="font-inter">У вас нет папок и заметок</p>
+        <p class="font-inter2">Нажмите сюда, чтобы создать новую папку</p>
+    </button>
+
+    <script src="html.js"></script>
 </body>
 
 </html>
