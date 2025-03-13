@@ -39,17 +39,30 @@ document.addEventListener("DOMContentLoaded", function () {
             if (checkbox.checked) {
                 let tag = document.createElement("div");
                 tag.classList.add("filter-tag");
+    
+                // Добавляем цвет в зависимости от значения
+                if (checkbox.value.includes("администратор")) {
+                    tag.style.background = "rgba(255, 51, 51, 0.2)";
+                } else if (checkbox.value.includes("пригласили")) {
+                    tag.style.background = "rgba(226, 208, 247, 1)";
+                } else if (checkbox.value.includes("Ограниченный")) {
+                    tag.style.background = "rgba(234, 249, 206, 1)";
+                } else if (checkbox.value.includes("Приватный")) {
+                    tag.style.background = "rgba(249, 238, 206, 1)";
+                }
+    
                 tag.innerHTML = `${checkbox.value} <span class="remove">×</span>`;
-
+    
                 tag.querySelector(".remove").addEventListener("click", function () {
                     checkbox.checked = false;
                     updateFilters();
                 });
-
+    
                 selectedFilters.appendChild(tag);
             }
         });
     }
+    
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", updateFilters);
@@ -65,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         checkboxes.forEach(checkbox => (checkbox.checked = selectAll.checked));
         updateFilters();
     });
+    
 
     // Следим за изменением размера окна и адаптируем положение фильтра
     window.addEventListener("resize", function () {

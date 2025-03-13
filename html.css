@@ -146,10 +146,10 @@ nav .menu li a img {
 .filter-container {
     display: none;
     position: absolute; /* Обеспечивает точное позиционирование */
-    width: 250px;
+    width: 320px;
     background: white;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     z-index: 1000; /* Чтобы не прятался за другими элементами */
@@ -163,7 +163,7 @@ nav .menu li a img {
 }
 
 .clear-filter {
-    color: blue;
+    color: rgba(45, 105, 224, 1);
     text-decoration: none;
     font-size: 12px;
     cursor: pointer;
@@ -198,10 +198,17 @@ nav .menu li a img {
     gap: 5px;
 }
 
+.lbl1 { background: rgba(255, 51, 51, 0.2); }
+.lbl2 { background: rgba(226, 208, 247, 1); }
+.lbl3 { background: rgba(234, 249, 206, 1); }
+.lbl4 { background: rgba(249, 238, 206, 1); }
+
 .filter-options label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    padding: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
