@@ -31,6 +31,7 @@
             </ul>
         </nav>
         <div class="search">
+            <!--поиск и фильтр-->
             <div class="search-box">
                 <img src="/img/Search 1.svg" class="search-icon" alt="Search">
                 <input type="text" placeholder="Поиск">
@@ -38,6 +39,31 @@
                     <img src="/img/Filter 1.svg" class="filter-icon" alt="Filter">
                 </button>
             </div>
+            <!--поиск и фильтр-->
+            <!--filter-->
+            <div class="filter-container">
+                <div class="filter-header">
+                    <span>Фильтр</span>
+                    <a href="#" class="clear-filter">Очистить</a>
+                </div>
+                
+                <div class="selected-filters">
+                    <!-- Выбранные фильтры (добавляются динамически) -->
+                </div>
+            
+                <label>
+                    <input type="checkbox" id="select-all"> Выбрать всё
+                </label>
+            
+                <div class="filter-options">
+                    <label><input type="checkbox" value="Папки где я администратор"> Папки где я администратор</label>
+                    <label><input type="checkbox" value="Папки куда меня пригласили"> Папки куда меня пригласили</label>
+                    <label><input type="checkbox" value="Видимость: Ограниченный"> Видимость: Ограниченный</label>
+                    <label><input type="checkbox" value="Видимость: Приватный"> Видимость: Приватный</label>
+                </div>
+            </div>
+                      
+            <!--filter-->
         </div>
         <button class="enabling-btn">
             <img src="/img/Frame 8.svg" class="enabling" alt="Включение">
@@ -69,7 +95,8 @@
         <p class="font-inter2">Нажмите сюда, чтобы создать новую папку</p>
     </button>
 
-    <script src="html.js"></script>
+    <script src="js/html.js"></script>
+    <script src="js/filtr.js"></script>
 </body>
 
 </html>

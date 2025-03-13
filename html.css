@@ -114,8 +114,9 @@ nav .menu li a img {
     height: 20px;
     flex-shrink: 0;
 }
-
+/*Фильтр*/
 .filter-btn {
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
@@ -129,7 +130,7 @@ nav .menu li a img {
     width: 20px;
     height: 20px;
 }
-
+/*Фильтр*/
 .enabling-btn {
     background: none;
     border: none;
@@ -140,6 +141,71 @@ nav .menu li a img {
     justify-content: center;
     padding: 5px;
 }
+
+/**/
+.filter-container {
+    display: none;
+    position: absolute; /* Обеспечивает точное позиционирование */
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 1000; /* Чтобы не прятался за другими элементами */
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.clear-filter {
+    color: blue;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.filter-tag {
+    display: flex;
+    align-items: center;
+    background: lightgray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.filter-tag .remove {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/**/
 
 .enabling-btn img {
     width: 44px; 
@@ -174,6 +240,19 @@ img {
     gap: 12;
     background: #fafafa;
     border: none;
+}
+
+.click-to-page .font-inter {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    color: #0d0d0d;
+}
+
+.click-to-page .font-inter2 {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    color: #808080;
+
 }
 
 /* Адаптация устроиств*/
